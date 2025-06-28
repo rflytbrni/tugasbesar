@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Buku - boekwaardering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>boekwaardering</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="popular.html">Buku Terpopuler</a></li>
+                <li><a href="fiction.html">Genre: Fiksi</a></li>
+                <li><a href="non-fiction.html">Genre: Non-Fiksi</a></li>
+                <li><a href="add-book.html" class="active">Tambah Buku</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="help.html">Bantuan</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Tambah Buku Baru</h2>
+            <p>Bagikan rekomendasi buku favorit Anda dengan komunitas</p>
+        </section>
+
+        <section class="form-section">
+            <form id="addBookForm" class="book-form">
+                <div class="form-group">
+                    <label for="bookTitle">Judul Buku:</label>
+                    <input type="text" id="bookTitle" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookAuthor">Penulis:</label>
+                    <input type="text" id="bookAuthor" name="author" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookGenre">Genre:</label>
+                    <select id="bookGenre" name="genre" required>
+                        <option value="">Pilih Genre</option>
+                        <option value="fiction">Fiksi</option>
+                        <option value="non-fiction">Non-Fiksi</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookDescription">Deskripsi:</label>
+                    <textarea id="bookDescription" name="description" rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-primary">Tambah Buku</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 boekwaardering. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('addBookForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            addNewBook();
+        });
+    </script>
+</body>
+</html>
